@@ -1,0 +1,76 @@
+{
+   "CLIAction" : {
+      "actionPack" : {
+         "name" : "Sample CLI Actions",
+         "category" : "Sample category",
+         "description" : "",
+         "author" : "Nolio",
+         "version" : "1.0",
+         "lastModified" : "2014-04-01T11:12:38.179-06:00",
+         "tags" : [ ],
+         "packageName" : "samplecliactions"
+      },
+      "name" : "Echo action",
+      "category" : "CLI",
+      "description" : "Demonstration of a basic echo action",
+      "inputParamList" : [ {
+         "name" : "message",
+         "type" : "String",
+         "description" : "This message will be displayed by the echo command",
+         "required" : false,
+         "defaultValue" : "message test",
+         "value" : "message test",
+         "variableName" : "message"
+      } ],
+      "outputParamList" : [ {
+         "name" : "Execution Output",
+         "type" : "String",
+         "description" : "This output parameter holds the complete raw output of the CLI execution.",
+         "filterValue" : "[\\s\\S]*",
+         "filterType" : "REGEX",
+         "variableName" : "executionoutput",
+         "source" : "standardOut"
+      }, {
+         "name" : "Error output",
+         "type" : "String",
+         "description" : "This error output parameter holds the complete raw error output of the CLI execution.",
+         "filterType" : "REGEX",
+         "variableName" : "erroroutput",
+         "source" : "standardError"
+      }, {
+         "name" : "Exit code",
+         "type" : "Integer",
+         "description" : "This variable holds the exit code of the script execution.",
+         "filterType" : "REGEX",
+         "variableName" : "exitcode",
+         "source" : "exitCode"
+      } ],
+      "successMessage" : "Execution succeeded",
+      "errorCondition" : [ {
+         "parameter" : "Error output",
+         "operation" : "REGEX",
+         "value" : ".+",
+         "message" : "The command execution failed!"
+      } ],
+      "type" : "CLI",
+      "complete" : true,
+      "lastModified" : "2014-04-01T11:26:03.046-06:00",
+      "className" : "EchoAction",
+      "packageName" : "com.nolio.samplecliactions",
+      "cliCommands" : [ {
+         "command" : "echo ${message}",
+         "execDir" : "%TEMP%",
+         "osType" : "WINDOWS",
+         "overwriteOutput" : false,
+         "timeout" : 0,
+         "waitForProcessToFinish" : false
+      }, {
+         "command" : "echo ${message}",
+         "execDir" : "~",
+         "osType" : "LINUX",
+         "overwriteOutput" : false,
+         "timeout" : 0,
+         "waitForProcessToFinish" : false
+      } ]
+   }
+}

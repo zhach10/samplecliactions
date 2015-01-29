@@ -1,0 +1,12 @@
+{
+   "ActionPack" : {
+      "name" : "Sample CLI Actions",
+      "category" : "Sample category",
+      "description" : "",
+      "author" : "Nolio",
+      "version" : "1.0",
+      "lastModified" : "2014-04-01T11:12:38.179-06:00",
+      "tags" : [ ],
+      "packageName" : "samplecliactions"
+   }
+}
