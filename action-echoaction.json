@@ -5,14 +5,17 @@
          "category" : "Sample category",
          "description" : "",
          "author" : "Nolio",
-         "version" : "1.0",
-         "lastModified" : "2014-04-01T11:12:38.179-06:00",
+         "dependencies" : "",
+         "platform" : "",
+         "version" : "1.0 .3  ",
+         "license" : "",
+         "lastModified" : "2015-04-13T21:41:33.534-07:00",
          "tags" : [ ],
          "packageName" : "samplecliactions"
       },
       "name" : "Echo action",
       "category" : "CLI",
-      "description" : "Demonstration of a basic echo action",
+      "description" : "Demonstration of a basic echo action  asdasd  asd",
       "inputParamList" : [ {
          "name" : "message",
          "type" : "String",
@@ -20,7 +23,8 @@
          "required" : false,
          "defaultValue" : "message test",
          "value" : "message test",
-         "variableName" : "message"
+         "variableName" : "message",
+         "arrayOption" : false
       } ],
       "outputParamList" : [ {
          "name" : "Execution Output",
@@ -29,21 +33,24 @@
          "filterValue" : "[\\s\\S]*",
          "filterType" : "REGEX",
          "variableName" : "executionoutput",
-         "source" : "standardOut"
+         "source" : "standardOut",
+         "arrayOption" : false
       }, {
          "name" : "Error output",
          "type" : "String",
          "description" : "This error output parameter holds the complete raw error output of the CLI execution.",
          "filterType" : "REGEX",
          "variableName" : "erroroutput",
-         "source" : "standardError"
+         "source" : "standardError",
+         "arrayOption" : false
       }, {
          "name" : "Exit code",
          "type" : "Integer",
          "description" : "This variable holds the exit code of the script execution.",
          "filterType" : "REGEX",
          "variableName" : "exitcode",
-         "source" : "exitCode"
+         "source" : "exitCode",
+         "arrayOption" : false
       } ],
       "successMessage" : "Execution succeeded",
       "errorCondition" : [ {
@@ -54,9 +61,9 @@
       } ],
       "type" : "CLI",
       "complete" : true,
-      "lastModified" : "2014-04-01T11:26:03.046-06:00",
+      "lastModified" : "2015-04-14T00:18:58.461-07:00",
       "className" : "EchoAction",
-      "packageName" : "com.nolio.samplecliactions",
+      "packageName" : "com.mycompany.samplecliactions",
       "cliCommands" : [ {
          "command" : "echo ${message}",
          "execDir" : "%TEMP%",
