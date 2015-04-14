@@ -4,8 +4,11 @@
       "category" : "Sample category",
       "description" : "",
       "author" : "Nolio",
-      "version" : "1.0",
-      "lastModified" : "2014-04-01T11:12:38.179-06:00",
+      "dependencies" : "",
+      "platform" : "",
+      "version" : "1.0 .3 ",
+      "license" : "",
+      "lastModified" : "2015-04-13T21:41:33.534-07:00",
       "tags" : [ ],
       "packageName" : "samplecliactions"
    }
